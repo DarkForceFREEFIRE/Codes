@@ -1,3 +1,4 @@
-       N O T I F I C A T I O N
-⚠ All panel codes are unsafe at this moment.
-   Use this at your own risk!
+              N O T I F I C A T I O N
+
+  ⚠ All panel codes are unsafe at this moment.
+         Use this at your own risk!
