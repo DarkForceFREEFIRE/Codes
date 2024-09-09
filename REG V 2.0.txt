@@ -4,3 +4,22 @@ Application:-Avalible Updates In V2-
 No updates
 --Aimbot Safety--
 Risk
+--Sniper Safety--
+Risk
+--Esp Safety--
+Safe
+--Experiment Safety--
+Risk
+--Bypass Safety--
+Blacklist
+--Legits Safety--
+Not Avalible
+
+
+
+
+
+
+
+
+
