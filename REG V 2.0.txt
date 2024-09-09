@@ -3,9 +3,9 @@ enable
 Application:-Avalible Updates In V2-
 No updates
 --Aimbot Safety--
-Risk
+Testing
 --Sniper Safety--
-Risk
+Testing
 --Esp Safety--
 Safe
 --Experiment Safety--
