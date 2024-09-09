@@ -13,4 +13,4 @@ Risk
 --Bypass Safety--
 Blacklist
 --Legits Safety--
-Not Avalible
+NotAvalible
