@@ -15,4 +15,4 @@ Blacklist
 --Legits Safety--
 NotAvalible
 --Updates 1--
-off
+on
