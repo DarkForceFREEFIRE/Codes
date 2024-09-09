@@ -15,5 +15,5 @@ Blacklist
 --Legits Safety--
 NotAvalible
 --Updates 1--
-enable
+disable
 ___________________________________
