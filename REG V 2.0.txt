@@ -13,7 +13,11 @@ Risk
 --Bypass Safety--
 Blacklist
 --Legits Safety--
-NotAvalible
+None
 --Updates 1--
+enable
+-Details:-Update Button V2.2-
 disable
+Application:-Avalible Updates In V2.2-
+No updates
 ___________________________________
