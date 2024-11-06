@@ -1,0 +1,2028 @@
+Memory.pyc (Python 3.12)
+[Code]
+    File Name: Memory.py
+    Object Name: <module>
+    Qualified Name: <module>
+    Arg Count: 0
+    Pos Only Arg Count: 0
+    KW Only Arg Count: 0
+    Stack Size: 2
+    Flags: 0x00000000
+    [Names]
+        'pyexpat'
+        'pymem'
+        'pymem.pattern'
+        'pymem.process'
+        'time'
+        'ctypes'
+        'ctypes.wintypes'
+        'os'
+        'sys'
+        'pm'
+        'scan_and_replace'
+        'get_resource_path'
+        'get_process'
+        'get_pid'
+        'get_drive_serial_number'
+        'get_hwid'
+        'adjust_privileges'
+        'find_pattern'
+        'aimbot_load'
+        'original_values'
+        'aimbot_on'
+        'aimbot_off'
+        'drag_load'
+        'original_drag_values'
+        'aimdrag_on'
+        'aimdrag_off'
+        'aimDra_gonnomal'
+        'aimDra_gonnomal2'
+        'aim_v1_On_nomal'
+    [Locals+Names]
+    [Constants]
+        0
+        None
+        [Code]
+            File Name: Memory.py
+            Object Name: scan_and_replace
+            Qualified Name: scan_and_replace
+            Arg Count: 3
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 9
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'pymem'
+                'Pymem'
+                'open_process_from_id'
+                'process_id'
+                'pattern_scan_all'
+                'len'
+                'print'
+                'write_bytes'
+            [Locals+Names]
+                'processName'
+                'search'
+                'replace'
+                'pm'
+                'matches'
+                'match'
+            [Constants]
+                None
+                True
+                (
+                    'return_multiple'
+                )
+                1
+                'One Value Found'
+                'More Than One Value Found'
+                False
+            [Disassembly]
+                0       RESUME                          0
+                2       LOAD_GLOBAL                     1: NULL + pymem
+                12      LOAD_ATTR                       2: Pymem
+                32      LOAD_FAST                       0: processName
+                34      CALL                            1
+                42      STORE_FAST                      3: pm
+                44      LOAD_FAST                       3: pm
+                46      LOAD_ATTR                       5: open_process_from_id
+                66      LOAD_FAST                       3: pm
+                68      LOAD_ATTR                       6: process_id
+                88      CALL                            1
+                96      POP_TOP
+                98      LOAD_FAST                       3: pm
+                100     LOAD_ATTR                       9: pattern_scan_all
+                120     LOAD_FAST                       1: search
+                122     LOAD_CONST                      1: True
+                124     KW_NAMES                        2: ('return_multiple',)
+                126     CALL                            2
+                134     STORE_FAST                      4: matches
+                136     LOAD_FAST                       4: matches
+                138     GET_ITER
+                140     FOR_ITER                        120 (to 382)
+                144     STORE_FAST                      5: match
+                146     LOAD_GLOBAL                     11: NULL + len
+                156     LOAD_FAST                       4: matches
+                158     CALL                            1
+                166     LOAD_CONST                      3: 1
+                168     COMPARE_OP                      40 (==)
+                172     POP_JUMP_IF_FALSE               41 (to 256)
+                174     LOAD_GLOBAL                     13: NULL + print
+                184     LOAD_CONST                      4: 'One Value Found'
+                186     CALL                            1
+                194     POP_TOP
+                196     LOAD_FAST                       3: pm
+                198     LOAD_ATTR                       15: write_bytes
+                218     LOAD_FAST                       5: match
+                220     LOAD_FAST                       2: replace
+                222     LOAD_GLOBAL                     11: NULL + len
+                232     LOAD_FAST                       2: replace
+                234     CALL                            1
+                242     CALL                            3
+                250     POP_TOP
+                252     POP_TOP
+                254     RETURN_CONST                    1: True
+                256     LOAD_GLOBAL                     11: NULL + len
+                266     LOAD_FAST                       4: matches
+                268     CALL                            1
+                276     LOAD_CONST                      3: 1
+                278     COMPARE_OP                      68 (>)
+                282     POP_JUMP_IF_FALSE               48 (to 380)
+                284     LOAD_GLOBAL                     13: NULL + print
+                294     LOAD_CONST                      5: 'More Than One Value Found'
+                296     CALL                            1
+                304     POP_TOP
+                306     LOAD_FAST                       4: matches
+                308     GET_ITER
+                310     FOR_ITER                        30 (to 372)
+                314     STORE_FAST                      5: match
+                316     LOAD_FAST                       3: pm
+                318     LOAD_ATTR                       15: write_bytes
+                338     LOAD_FAST                       5: match
+                340     LOAD_FAST                       2: replace
+                342     LOAD_GLOBAL                     11: NULL + len
+                352     LOAD_FAST                       2: replace
+                354     CALL                            1
+                362     CALL                            3
+                370     POP_TOP
+                372     JUMP_BACKWARD                   32 (to 310)
+                374     END_FOR
+                376     POP_TOP
+                378     RETURN_CONST                    1: True
+                380     POP_TOP
+                382     RETURN_CONST                    6: False
+                384     END_FOR
+                386     RETURN_CONST                    0: None
+        [Code]
+            File Name: Memory.py
+            Object Name: get_resource_path
+            Qualified Name: get_resource_path
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 4
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'sys'
+                '_MEIPASS'
+                'Exception'
+                'os'
+                'path'
+                'abspath'
+                'join'
+            [Locals+Names]
+                'relative_path'
+                'base_path'
+            [Constants]
+                ' Get absolute path to resource, works for both development and PyInstaller. '
+                '.'
+            [Disassembly]
+                0       RESUME                          0
+                2       NOP
+                4       LOAD_GLOBAL                     0: sys
+                14      LOAD_ATTR                       2: _MEIPASS
+                34      STORE_FAST                      1: base_path
+                36      LOAD_GLOBAL                     6: os
+                46      LOAD_ATTR                       8: path
+                66      LOAD_ATTR                       13: join
+                86      LOAD_FAST                       1: base_path
+                88      LOAD_FAST                       0: relative_path
+                90      CALL                            2
+                98      RETURN_VALUE
+                100     PUSH_EXC_INFO
+                102     LOAD_GLOBAL                     4: Exception
+                112     CHECK_EXC_MATCH
+                114     POP_JUMP_IF_FALSE               34 (to 184)
+                116     POP_TOP
+                118     LOAD_GLOBAL                     6: os
+                128     LOAD_ATTR                       8: path
+                148     LOAD_ATTR                       11: abspath
+                168     LOAD_CONST                      1: '.'
+                170     CALL                            1
+                178     STORE_FAST                      1: base_path
+                180     POP_EXCEPT
+                182     JUMP_BACKWARD                   74 (to 36)
+                184     RERAISE                         0
+                186     COPY                            3
+                188     POP_EXCEPT
+                190     RERAISE                         1
+        [Code]
+            File Name: Memory.py
+            Object Name: get_process
+            Qualified Name: get_process
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 4
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'pymem'
+                'Pymem'
+                'print'
+                'process_id'
+            [Locals+Names]
+                'procesName'
+                'pm'
+            [Constants]
+                None
+                'Process Found Please Continue'
+                'Process Not Found Waiting for process'
+                False
+            [Disassembly]
+                0       RESUME                          0
+                2       NOP
+                4       LOAD_GLOBAL                     1: NULL + pymem
+                14      LOAD_ATTR                       2: Pymem
+                34      LOAD_FAST                       0: procesName
+                36      CALL                            1
+                44      STORE_FAST                      1: pm
+                46      LOAD_GLOBAL                     5: NULL + print
+                56      LOAD_CONST                      1: 'Process Found Please Continue'
+                58      CALL                            1
+                66      POP_TOP
+                68      LOAD_FAST                       1: pm
+                70      LOAD_ATTR                       6: process_id
+                90      RETURN_VALUE
+                92      PUSH_EXC_INFO
+                94      POP_TOP
+                96      LOAD_GLOBAL                     5: NULL + print
+                106     LOAD_CONST                      2: 'Process Not Found Waiting for process'
+                108     CALL                            1
+                116     POP_TOP
+                118     POP_EXCEPT
+                120     RETURN_CONST                    3: False
+                122     COPY                            3
+                124     POP_EXCEPT
+                126     RERAISE                         1
+        [Code]
+            File Name: Memory.py
+            Object Name: get_pid
+            Qualified Name: get_pid
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 3
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'pymem'
+                'Pymem'
+                'process_id'
+            [Locals+Names]
+                'processName'
+                'pm'
+            [Constants]
+                None
+            [Disassembly]
+                0       RESUME                          0
+                2       LOAD_GLOBAL                     1: NULL + pymem
+                12      LOAD_ATTR                       2: Pymem
+                32      LOAD_FAST                       0: processName
+                34      CALL                            1
+                42      STORE_FAST                      1: pm
+                44      LOAD_FAST                       1: pm
+                46      LOAD_ATTR                       4: process_id
+                66      RETURN_VALUE
+        [Code]
+            File Name: Memory.py
+            Object Name: get_drive_serial_number
+            Qualified Name: get_drive_serial_number
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 12
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'ctypes'
+                'windll'
+                'kernel32'
+                'create_unicode_buffer'
+                'c_ulong'
+                'GetVolumeInformationW'
+                'c_wchar_p'
+                'sizeof'
+                'byref'
+                'value'
+            [Locals+Names]
+                'kernel32'
+                'volume_name_buffer'
+                'file_system_name_buffer'
+                'serial_number'
+                'max_component_length'
+                'file_system_flags'
+                'success'
+            [Constants]
+                None
+                1024
+                0
+                'C:\\'
+            [Disassembly]
+                0       RESUME                          0
+                2       LOAD_GLOBAL                     0: ctypes
+                12      LOAD_ATTR                       2: windll
+                32      LOAD_ATTR                       4: kernel32
+                52      STORE_FAST                      0: kernel32
+                54      LOAD_GLOBAL                     1: NULL + ctypes
+                64      LOAD_ATTR                       6: create_unicode_buffer
+                84      LOAD_CONST                      1: 1024
+                86      CALL                            1
+                94      STORE_FAST                      1: volume_name_buffer
+                96      LOAD_GLOBAL                     1: NULL + ctypes
+                106     LOAD_ATTR                       6: create_unicode_buffer
+                126     LOAD_CONST                      1: 1024
+                128     CALL                            1
+                136     STORE_FAST                      2: file_system_name_buffer
+                138     LOAD_GLOBAL                     1: NULL + ctypes
+                148     LOAD_ATTR                       8: c_ulong
+                168     LOAD_CONST                      2: 0
+                170     CALL                            1
+                178     STORE_FAST                      3: serial_number
+                180     LOAD_GLOBAL                     1: NULL + ctypes
+                190     LOAD_ATTR                       8: c_ulong
+                210     LOAD_CONST                      2: 0
+                212     CALL                            1
+                220     STORE_FAST                      4: max_component_length
+                222     LOAD_GLOBAL                     1: NULL + ctypes
+                232     LOAD_ATTR                       8: c_ulong
+                252     LOAD_CONST                      2: 0
+                254     CALL                            1
+                262     STORE_FAST                      5: file_system_flags
+                264     LOAD_FAST                       0: kernel32
+                266     LOAD_ATTR                       11: GetVolumeInformationW
+                286     LOAD_GLOBAL                     1: NULL + ctypes
+                296     LOAD_ATTR                       12: c_wchar_p
+                316     LOAD_CONST                      3: 'C:\\'
+                318     CALL                            1
+                326     LOAD_FAST                       1: volume_name_buffer
+                328     LOAD_GLOBAL                     1: NULL + ctypes
+                338     LOAD_ATTR                       14: sizeof
+                358     LOAD_FAST                       1: volume_name_buffer
+                360     CALL                            1
+                368     LOAD_GLOBAL                     1: NULL + ctypes
+                378     LOAD_ATTR                       16: byref
+                398     LOAD_FAST                       3: serial_number
+                400     CALL                            1
+                408     LOAD_GLOBAL                     1: NULL + ctypes
+                418     LOAD_ATTR                       16: byref
+                438     LOAD_FAST                       4: max_component_length
+                440     CALL                            1
+                448     LOAD_GLOBAL                     1: NULL + ctypes
+                458     LOAD_ATTR                       16: byref
+                478     LOAD_FAST                       5: file_system_flags
+                480     CALL                            1
+                488     LOAD_FAST                       2: file_system_name_buffer
+                490     LOAD_GLOBAL                     1: NULL + ctypes
+                500     LOAD_ATTR                       14: sizeof
+                520     LOAD_FAST                       2: file_system_name_buffer
+                522     CALL                            1
+                530     CALL                            8
+                538     STORE_FAST                      6: success
+                540     LOAD_FAST                       6: success
+                542     POP_JUMP_IF_FALSE               12 (to 568)
+                544     LOAD_FAST                       3: serial_number
+                546     LOAD_ATTR                       18: value
+                566     RETURN_VALUE
+                568     RETURN_CONST                    0: None
+        [Code]
+            File Name: Memory.py
+            Object Name: get_hwid
+            Qualified Name: get_hwid
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 2
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'get_drive_serial_number'
+            [Locals+Names]
+                'serial_number'
+            [Constants]
+                None
+            [Disassembly]
+                0       RESUME                          0
+                2       LOAD_GLOBAL                     1: NULL + get_drive_serial_number
+                12      CALL                            0
+                20      STORE_FAST                      0: serial_number
+                22      LOAD_FAST                       0: serial_number
+                24      POP_JUMP_IF_FALSE               2 (to 30)
+                26      LOAD_FAST                       0: serial_number
+                28      RETURN_VALUE
+                30      RETURN_CONST                    0: None
+        [Code]
+            File Name: Memory.py
+            Object Name: adjust_privileges
+            Qualified Name: adjust_privileges
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 8
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'ctypes'
+                'c_void_p'
+                'c_longlong'
+                'windll'
+                'advapi32'
+                'OpenProcessToken'
+                'kernel32'
+                'GetCurrentProcess'
+                'byref'
+                'LookupPrivilegeValueA'
+                'encode'
+                'Structure'
+                'value'
+                'AdjustTokenPrivileges'
+                'CloseHandle'
+            [Locals+Names]
+                'SE_DEBUG_NAME'
+                'SE_PRIVILEGE_ENABLED'
+                'token_handle'
+                'luid'
+                'TOKEN_PRIVILEGES'
+                'new_privileges'
+                'LUID_AND_ATTRIBUTES'
+            [Constants]
+                '\n    Adjust token privileges to enable SeDebugPrivilege.\n    This is necessary to manipulate memory of other processes.\n    '
+                'SeDebugPrivilege'
+                2
+                40
+                0
+                'ascii'
+                [Code]
+                    File Name: Memory.py
+                    Object Name: LUID_AND_ATTRIBUTES
+                    Qualified Name: adjust_privileges.<locals>.LUID_AND_ATTRIBUTES
+                    Arg Count: 0
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 3
+                    Flags: 0x00000000
+                    [Names]
+                        '__name__'
+                        '__module__'
+                        '__qualname__'
+                        'ctypes'
+                        'c_longlong'
+                        'c_ulong'
+                        '_fields_'
+                    [Locals+Names]
+                    [Constants]
+                        'adjust_privileges.<locals>.LUID_AND_ATTRIBUTES'
+                        'Luid'
+                        'Attributes'
+                        None
+                    [Disassembly]
+                        0       RESUME                          0
+                        2       LOAD_NAME                       0: __name__
+                        4       STORE_NAME                      1: __module__
+                        6       LOAD_CONST                      0: 'adjust_privileges.<locals>.LUID_AND_ATTRIBUTES'
+                        8       STORE_NAME                      2: __qualname__
+                        10      LOAD_CONST                      1: 'Luid'
+                        12      LOAD_NAME                       3: ctypes
+                        14      LOAD_ATTR                       8: c_longlong
+                        34      BUILD_TUPLE                     2
+                        36      LOAD_CONST                      2: 'Attributes'
+                        38      LOAD_NAME                       3: ctypes
+                        40      LOAD_ATTR                       10: c_ulong
+                        60      BUILD_TUPLE                     2
+                        62      BUILD_LIST                      2
+                        64      STORE_NAME                      6: _fields_
+                        66      RETURN_CONST                    3: None
+                'LUID_AND_ATTRIBUTES'
+                [Code]
+                    File Name: Memory.py
+                    Object Name: TOKEN_PRIVILEGES
+                    Qualified Name: adjust_privileges.<locals>.TOKEN_PRIVILEGES
+                    Arg Count: 0
+                    Pos Only Arg Count: 0
+                    KW Only Arg Count: 0
+                    Stack Size: 3
+                    Flags: 0x00000000
+                    [Names]
+                        '__name__'
+                        '__module__'
+                        '__qualname__'
+                        'ctypes'
+                        'c_ulong'
+                        '_fields_'
+                    [Locals+Names]
+                        'LUID_AND_ATTRIBUTES'
+                    [Constants]
+                        'adjust_privileges.<locals>.TOKEN_PRIVILEGES'
+                        'PrivilegeCount'
+                        'Privileges'
+                        None
+                    [Disassembly]
+                        0       COPY_FREE_VARS                  1
+                        2       RESUME                          0
+                        4       LOAD_NAME                       0: __name__
+                        6       STORE_NAME                      1: __module__
+                        8       LOAD_CONST                      0: 'adjust_privileges.<locals>.TOKEN_PRIVILEGES'
+                        10      STORE_NAME                      2: __qualname__
+                        12      LOAD_CONST                      1: 'PrivilegeCount'
+                        14      LOAD_NAME                       3: ctypes
+                        16      LOAD_ATTR                       8: c_ulong
+                        36      BUILD_TUPLE                     2
+                        38      LOAD_CONST                      2: 'Privileges'
+                        40      LOAD_LOCALS
+                        42      LOAD_FROM_DICT_OR_DEREF         0: LUID_AND_ATTRIBUTES
+                        44      BUILD_TUPLE                     2
+                        46      BUILD_LIST                      2
+                        48      STORE_NAME                      5: _fields_
+                        50      RETURN_CONST                    3: None
+                'TOKEN_PRIVILEGES'
+                1
+                False
+                None
+            [Disassembly]
+                0       MAKE_CELL                       6: LUID_AND_ATTRIBUTES
+                2       RESUME                          0
+                4       LOAD_CONST                      1: 'SeDebugPrivilege'
+                6       STORE_FAST                      0: SE_DEBUG_NAME
+                8       LOAD_CONST                      2: 2
+                10      STORE_FAST                      1: SE_PRIVILEGE_ENABLED
+                12      LOAD_GLOBAL                     1: NULL + ctypes
+                22      LOAD_ATTR                       2: c_void_p
+                42      CALL                            0
+                50      STORE_FAST                      2: token_handle
+                52      LOAD_GLOBAL                     1: NULL + ctypes
+                62      LOAD_ATTR                       4: c_longlong
+                82      CALL                            0
+                90      STORE_FAST                      3: luid
+                92      LOAD_GLOBAL                     0: ctypes
+                102     LOAD_ATTR                       6: windll
+                122     LOAD_ATTR                       8: advapi32
+                142     LOAD_ATTR                       11: OpenProcessToken
+                162     LOAD_GLOBAL                     0: ctypes
+                172     LOAD_ATTR                       6: windll
+                192     LOAD_ATTR                       12: kernel32
+                212     LOAD_ATTR                       15: GetCurrentProcess
+                232     CALL                            0
+                240     LOAD_CONST                      3: 40
+                242     LOAD_GLOBAL                     1: NULL + ctypes
+                252     LOAD_ATTR                       16: byref
+                272     LOAD_FAST                       2: token_handle
+                274     CALL                            1
+                282     CALL                            3
+                290     POP_TOP
+                292     LOAD_GLOBAL                     0: ctypes
+                302     LOAD_ATTR                       6: windll
+                322     LOAD_ATTR                       8: advapi32
+                342     LOAD_ATTR                       19: LookupPrivilegeValueA
+                362     LOAD_CONST                      4: 0
+                364     LOAD_FAST                       0: SE_DEBUG_NAME
+                366     LOAD_ATTR                       21: encode
+                386     LOAD_CONST                      5: 'ascii'
+                388     CALL                            1
+                396     LOAD_GLOBAL                     1: NULL + ctypes
+                406     LOAD_ATTR                       16: byref
+                426     LOAD_FAST                       3: luid
+                428     CALL                            1
+                436     CALL                            3
+                444     POP_TOP
+                446     PUSH_NULL
+                448     LOAD_BUILD_CLASS
+                450     LOAD_CONST                      6: <CODE> LUID_AND_ATTRIBUTES
+                452     MAKE_FUNCTION                   0
+                454     LOAD_CONST                      7: 'LUID_AND_ATTRIBUTES'
+                456     LOAD_GLOBAL                     0: ctypes
+                466     LOAD_ATTR                       22: Structure
+                486     CALL                            3
+                494     STORE_DEREF                     6: LUID_AND_ATTRIBUTES
+                496     PUSH_NULL
+                498     LOAD_BUILD_CLASS
+                500     LOAD_CLOSURE                    6: LUID_AND_ATTRIBUTES
+                502     BUILD_TUPLE                     1
+                504     LOAD_CONST                      8: <CODE> TOKEN_PRIVILEGES
+                506     MAKE_FUNCTION                   8
+                508     LOAD_CONST                      9: 'TOKEN_PRIVILEGES'
+                510     LOAD_GLOBAL                     0: ctypes
+                520     LOAD_ATTR                       22: Structure
+                540     CALL                            3
+                548     STORE_FAST                      4: TOKEN_PRIVILEGES
+                550     PUSH_NULL
+                552     LOAD_FAST                       4: TOKEN_PRIVILEGES
+                554     LOAD_CONST                      10: 1
+                556     PUSH_NULL
+                558     LOAD_DEREF                      6: LUID_AND_ATTRIBUTES
+                560     LOAD_FAST                       3: luid
+                562     LOAD_ATTR                       24: value
+                582     LOAD_FAST                       1: SE_PRIVILEGE_ENABLED
+                584     CALL                            2
+                592     CALL                            2
+                600     STORE_FAST                      5: new_privileges
+                602     LOAD_GLOBAL                     0: ctypes
+                612     LOAD_ATTR                       6: windll
+                632     LOAD_ATTR                       8: advapi32
+                652     LOAD_ATTR                       27: AdjustTokenPrivileges
+                672     LOAD_FAST                       2: token_handle
+                674     LOAD_CONST                      11: False
+                676     LOAD_GLOBAL                     1: NULL + ctypes
+                686     LOAD_ATTR                       16: byref
+                706     LOAD_FAST                       5: new_privileges
+                708     CALL                            1
+                716     LOAD_CONST                      4: 0
+                718     LOAD_CONST                      12: None
+                720     LOAD_CONST                      12: None
+                722     CALL                            6
+                730     POP_TOP
+                732     LOAD_GLOBAL                     0: ctypes
+                742     LOAD_ATTR                       6: windll
+                762     LOAD_ATTR                       12: kernel32
+                782     LOAD_ATTR                       29: CloseHandle
+                802     LOAD_FAST                       2: token_handle
+                804     CALL                            1
+                812     POP_TOP
+                814     RETURN_CONST                    12: None
+        [Code]
+            File Name: Memory.py
+            Object Name: find_pattern
+            Qualified Name: find_pattern
+            Arg Count: 3
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 5
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'pymem'
+                'pattern'
+                'pattern_scan_all'
+                'process_handle'
+            [Locals+Names]
+                'pm'
+                'module_name'
+                'pattern'
+            [Constants]
+                None
+                True
+                (
+                    'return_multiple'
+                )
+            [Disassembly]
+                0       RESUME                          0
+                2       LOAD_GLOBAL                     0: pymem
+                12      LOAD_ATTR                       2: pattern
+                32      LOAD_ATTR                       5: pattern_scan_all
+                52      LOAD_FAST                       0: pm
+                54      LOAD_ATTR                       6: process_handle
+                74      LOAD_FAST                       2: pattern
+                76      LOAD_CONST                      1: True
+                78      KW_NAMES                        2: ('return_multiple',)
+                80      CALL                            3
+                88      RETURN_VALUE
+        [Code]
+            File Name: Memory.py
+            Object Name: aimbot_load
+            Qualified Name: aimbot_load
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 7
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'adjust_privileges'
+                'pymem'
+                'Pymem'
+                'find_pattern'
+                'print'
+                'exception'
+                'MemoryReadError'
+                'address'
+                'error_code'
+                'MemoryWriteError'
+                'WinAPIError'
+                'Exception'
+            [Locals+Names]
+                'process_name'
+                'pm'
+                'pattern'
+                'addresses'
+                'e'
+            [Constants]
+                None
+                'HD-Player.exe'
+                b'..\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00................\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xa5C\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00....................................................................................................................\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80.'
+                'No addresses found'
+                False
+                'Could not read memory at: '
+                ' - GetLastError: '
+                'Could not write memory at: '
+                'Windows API error occurred: '
+                'An unexpected error occurred: '
+            [Disassembly]
+                0       RESUME                          0
+                2       NOP
+                4       LOAD_GLOBAL                     1: NULL + adjust_privileges
+                14      CALL                            0
+                22      POP_TOP
+                24      LOAD_CONST                      1: 'HD-Player.exe'
+                26      STORE_FAST                      0: process_name
+                28      LOAD_GLOBAL                     3: NULL + pymem
+                38      LOAD_ATTR                       4: Pymem
+                58      LOAD_FAST                       0: process_name
+                60      CALL                            1
+                68      STORE_FAST                      1: pm
+                70      LOAD_CONST                      2: b'..\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00................\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xa5C\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00....................................................................................................................\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80.'
+                72      STORE_FAST                      2: pattern
+                74      LOAD_GLOBAL                     7: NULL + find_pattern
+                84      LOAD_FAST                       1: pm
+                86      LOAD_FAST                       0: process_name
+                88      LOAD_FAST                       2: pattern
+                90      CALL                            3
+                98      STORE_FAST                      3: addresses
+                100     LOAD_FAST                       3: addresses
+                102     POP_JUMP_IF_TRUE                12 (to 128)
+                104     LOAD_GLOBAL                     9: NULL + print
+                114     LOAD_CONST                      3: 'No addresses found'
+                116     CALL                            1
+                124     POP_TOP
+                126     RETURN_CONST                    4: False
+                128     LOAD_FAST                       3: addresses
+                130     RETURN_VALUE
+                132     PUSH_EXC_INFO
+                134     LOAD_GLOBAL                     2: pymem
+                144     LOAD_ATTR                       10: exception
+                164     LOAD_ATTR                       12: MemoryReadError
+                184     CHECK_EXC_MATCH
+                186     POP_JUMP_IF_FALSE               47 (to 282)
+                188     STORE_FAST                      4: e
+                190     LOAD_GLOBAL                     9: NULL + print
+                200     LOAD_CONST                      5: 'Could not read memory at: '
+                202     LOAD_FAST                       4: e
+                204     LOAD_ATTR                       14: address
+                224     FORMAT_VALUE                    0 (FVC_NONE)
+                226     LOAD_CONST                      6: ' - GetLastError: '
+                228     LOAD_FAST                       4: e
+                230     LOAD_ATTR                       16: error_code
+                250     FORMAT_VALUE                    0 (FVC_NONE)
+                252     BUILD_STRING                    4
+                254     CALL                            1
+                262     POP_TOP
+                264     POP_EXCEPT
+                266     LOAD_CONST                      0: None
+                268     STORE_FAST                      4: e
+                270     DELETE_FAST                     4: e
+                272     RETURN_CONST                    0: None
+                274     LOAD_CONST                      0: None
+                276     STORE_FAST                      4: e
+                278     DELETE_FAST                     4: e
+                280     RERAISE                         1
+                282     LOAD_GLOBAL                     2: pymem
+                292     LOAD_ATTR                       10: exception
+                312     LOAD_ATTR                       18: MemoryWriteError
+                332     CHECK_EXC_MATCH
+                334     POP_JUMP_IF_FALSE               47 (to 430)
+                336     STORE_FAST                      4: e
+                338     LOAD_GLOBAL                     9: NULL + print
+                348     LOAD_CONST                      7: 'Could not write memory at: '
+                350     LOAD_FAST                       4: e
+                352     LOAD_ATTR                       14: address
+                372     FORMAT_VALUE                    0 (FVC_NONE)
+                374     LOAD_CONST                      6: ' - GetLastError: '
+                376     LOAD_FAST                       4: e
+                378     LOAD_ATTR                       16: error_code
+                398     FORMAT_VALUE                    0 (FVC_NONE)
+                400     BUILD_STRING                    4
+                402     CALL                            1
+                410     POP_TOP
+                412     POP_EXCEPT
+                414     LOAD_CONST                      0: None
+                416     STORE_FAST                      4: e
+                418     DELETE_FAST                     4: e
+                420     RETURN_CONST                    0: None
+                422     LOAD_CONST                      0: None
+                424     STORE_FAST                      4: e
+                426     DELETE_FAST                     4: e
+                428     RERAISE                         1
+                430     LOAD_GLOBAL                     2: pymem
+                440     LOAD_ATTR                       10: exception
+                460     LOAD_ATTR                       20: WinAPIError
+                480     CHECK_EXC_MATCH
+                482     POP_JUMP_IF_FALSE               34 (to 552)
+                484     STORE_FAST                      4: e
+                486     LOAD_GLOBAL                     9: NULL + print
+                496     LOAD_CONST                      8: 'Windows API error occurred: '
+                498     LOAD_FAST                       4: e
+                500     LOAD_ATTR                       16: error_code
+                520     FORMAT_VALUE                    0 (FVC_NONE)
+                522     BUILD_STRING                    2
+                524     CALL                            1
+                532     POP_TOP
+                534     POP_EXCEPT
+                536     LOAD_CONST                      0: None
+                538     STORE_FAST                      4: e
+                540     DELETE_FAST                     4: e
+                542     RETURN_CONST                    0: None
+                544     LOAD_CONST                      0: None
+                546     STORE_FAST                      4: e
+                548     DELETE_FAST                     4: e
+                550     RERAISE                         1
+                552     LOAD_GLOBAL                     22: Exception
+                562     CHECK_EXC_MATCH
+                564     POP_JUMP_IF_FALSE               24 (to 614)
+                566     STORE_FAST                      4: e
+                568     LOAD_GLOBAL                     9: NULL + print
+                578     LOAD_CONST                      9: 'An unexpected error occurred: '
+                580     LOAD_FAST                       4: e
+                582     FORMAT_VALUE                    0 (FVC_NONE)
+                584     BUILD_STRING                    2
+                586     CALL                            1
+                594     POP_TOP
+                596     POP_EXCEPT
+                598     LOAD_CONST                      0: None
+                600     STORE_FAST                      4: e
+                602     DELETE_FAST                     4: e
+                604     RETURN_CONST                    0: None
+                606     LOAD_CONST                      0: None
+                608     STORE_FAST                      4: e
+                610     DELETE_FAST                     4: e
+                612     RERAISE                         1
+                614     RERAISE                         0
+                616     COPY                            3
+                618     POP_EXCEPT
+                620     RERAISE                         1
+        [Code]
+            File Name: Memory.py
+            Object Name: aimbot_on
+            Qualified Name: aimbot_on
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 6
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'pymem'
+                'Pymem'
+                'original_values'
+                'clear'
+                'read_int'
+                'append'
+                'write_int'
+            [Locals+Names]
+                'addresses'
+                'pm'
+                'address'
+                'addressscan'
+                'addressrep'
+                'buffer'
+            [Constants]
+                None
+                'HD-Player.exe'
+                144
+                92
+            [Disassembly]
+                0       RESUME                          0
+                2       LOAD_GLOBAL                     1: NULL + pymem
+                12      LOAD_ATTR                       2: Pymem
+                32      LOAD_CONST                      1: 'HD-Player.exe'
+                34      CALL                            1
+                42      STORE_FAST                      1: pm
+                44      LOAD_GLOBAL                     4: original_values
+                54      LOAD_ATTR                       7: clear
+                74      CALL                            0
+                82      POP_TOP
+                84      LOAD_FAST                       0: addresses
+                86      GET_ITER
+                88      FOR_ITER                        83 (to 256)
+                92      STORE_FAST                      2: address
+                94      LOAD_FAST                       2: address
+                96      LOAD_CONST                      2: 144
+                98      BINARY_OP                       0 (+)
+                102     STORE_FAST                      3: addressscan
+                104     LOAD_FAST                       2: address
+                106     LOAD_CONST                      3: 92
+                108     BINARY_OP                       0 (+)
+                112     STORE_FAST                      4: addressrep
+                114     LOAD_FAST                       1: pm
+                116     LOAD_ATTR                       9: read_int
+                136     LOAD_FAST                       3: addressscan
+                138     CALL                            1
+                146     STORE_FAST                      5: buffer
+                148     LOAD_GLOBAL                     4: original_values
+                158     LOAD_ATTR                       11: append
+                178     LOAD_FAST                       1: pm
+                180     LOAD_ATTR                       9: read_int
+                200     LOAD_FAST                       4: addressrep
+                202     CALL                            1
+                210     CALL                            1
+                218     POP_TOP
+                220     LOAD_FAST                       1: pm
+                222     LOAD_ATTR                       13: write_int
+                242     LOAD_FAST                       4: addressrep
+                244     LOAD_FAST                       5: buffer
+                246     CALL                            2
+                254     POP_TOP
+                256     JUMP_BACKWARD                   85 (to 88)
+                258     END_FOR
+                260     RETURN_CONST                    0: None
+        [Code]
+            File Name: Memory.py
+            Object Name: aimbot_off
+            Qualified Name: aimbot_off
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 6
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'pymem'
+                'Pymem'
+                'enumerate'
+                'original_values'
+                'write_int'
+            [Locals+Names]
+                'addresses'
+                'pm'
+                'index'
+                'address'
+                'addressrep'
+            [Constants]
+                None
+                'HD-Player.exe'
+                92
+            [Disassembly]
+                0       RESUME                          0
+                2       LOAD_GLOBAL                     1: NULL + pymem
+                12      LOAD_ATTR                       2: Pymem
+                32      LOAD_CONST                      1: 'HD-Player.exe'
+                34      CALL                            1
+                42      STORE_FAST                      1: pm
+                44      LOAD_GLOBAL                     5: NULL + enumerate
+                54      LOAD_FAST                       0: addresses
+                56      CALL                            1
+                64      GET_ITER
+                66      FOR_ITER                        45 (to 158)
+                70      UNPACK_SEQUENCE                 2
+                74      STORE_FAST                      2: index
+                76      STORE_FAST                      3: address
+                78      LOAD_FAST                       3: address
+                80      LOAD_CONST                      2: 92
+                82      BINARY_OP                       0 (+)
+                86      STORE_FAST                      4: addressrep
+                88      LOAD_GLOBAL                     6: original_values
+                98      LOAD_FAST                       2: index
+                100     BINARY_SUBSCR
+                104     POP_JUMP_IF_TRUE                1 (to 108)
+                106     JUMP_BACKWARD                   21 (to 66)
+                108     LOAD_FAST                       1: pm
+                110     LOAD_ATTR                       9: write_int
+                130     LOAD_FAST                       4: addressrep
+                132     LOAD_GLOBAL                     6: original_values
+                142     LOAD_FAST                       2: index
+                144     BINARY_SUBSCR
+                148     CALL                            2
+                156     POP_TOP
+                158     JUMP_BACKWARD                   47 (to 66)
+                160     END_FOR
+                162     RETURN_CONST                    0: None
+        [Code]
+            File Name: Memory.py
+            Object Name: drag_load
+            Qualified Name: drag_load
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 7
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'adjust_privileges'
+                'pymem'
+                'Pymem'
+                'find_pattern'
+                'drag_addresses'
+                'print'
+                'exception'
+                'MemoryReadError'
+                'address'
+                'error_code'
+                'MemoryWriteError'
+                'WinAPIError'
+                'Exception'
+            [Locals+Names]
+                'process_name'
+                'pm'
+                'pattern'
+                'e'
+            [Constants]
+                None
+                'HD-Player.exe'
+                b'\x00\x00\x00\x00\x00\x00\xa5C\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00....................................................................................................................\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\xbf'
+                'No addresses found'
+                False
+                'Could not read memory at: '
+                ' - GetLastError: '
+                'Could not write memory at: '
+                'Windows API error occurred: '
+                'An unexpected error occurred: '
+            [Disassembly]
+                0       RESUME                          0
+                2       NOP
+                4       LOAD_GLOBAL                     1: NULL + adjust_privileges
+                14      CALL                            0
+                22      POP_TOP
+                24      LOAD_CONST                      1: 'HD-Player.exe'
+                26      STORE_FAST                      0: process_name
+                28      LOAD_GLOBAL                     3: NULL + pymem
+                38      LOAD_ATTR                       4: Pymem
+                58      LOAD_FAST                       0: process_name
+                60      CALL                            1
+                68      STORE_FAST                      1: pm
+                70      LOAD_CONST                      2: b'\x00\x00\x00\x00\x00\x00\xa5C\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00....................................................................................................................\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\xbf'
+                72      STORE_FAST                      2: pattern
+                74      LOAD_GLOBAL                     7: NULL + find_pattern
+                84      LOAD_FAST                       1: pm
+                86      LOAD_FAST                       0: process_name
+                88      LOAD_FAST                       2: pattern
+                90      CALL                            3
+                98      STORE_GLOBAL                    4: drag_addresses
+                100     LOAD_GLOBAL                     8: drag_addresses
+                110     POP_JUMP_IF_TRUE                12 (to 136)
+                112     LOAD_GLOBAL                     11: NULL + print
+                122     LOAD_CONST                      3: 'No addresses found'
+                124     CALL                            1
+                132     POP_TOP
+                134     RETURN_CONST                    4: False
+                136     LOAD_GLOBAL                     8: drag_addresses
+                146     RETURN_VALUE
+                148     PUSH_EXC_INFO
+                150     LOAD_GLOBAL                     2: pymem
+                160     LOAD_ATTR                       12: exception
+                180     LOAD_ATTR                       14: MemoryReadError
+                200     CHECK_EXC_MATCH
+                202     POP_JUMP_IF_FALSE               47 (to 298)
+                204     STORE_FAST                      3: e
+                206     LOAD_GLOBAL                     11: NULL + print
+                216     LOAD_CONST                      5: 'Could not read memory at: '
+                218     LOAD_FAST                       3: e
+                220     LOAD_ATTR                       16: address
+                240     FORMAT_VALUE                    0 (FVC_NONE)
+                242     LOAD_CONST                      6: ' - GetLastError: '
+                244     LOAD_FAST                       3: e
+                246     LOAD_ATTR                       18: error_code
+                266     FORMAT_VALUE                    0 (FVC_NONE)
+                268     BUILD_STRING                    4
+                270     CALL                            1
+                278     POP_TOP
+                280     POP_EXCEPT
+                282     LOAD_CONST                      0: None
+                284     STORE_FAST                      3: e
+                286     DELETE_FAST                     3: e
+                288     RETURN_CONST                    0: None
+                290     LOAD_CONST                      0: None
+                292     STORE_FAST                      3: e
+                294     DELETE_FAST                     3: e
+                296     RERAISE                         1
+                298     LOAD_GLOBAL                     2: pymem
+                308     LOAD_ATTR                       12: exception
+                328     LOAD_ATTR                       20: MemoryWriteError
+                348     CHECK_EXC_MATCH
+                350     POP_JUMP_IF_FALSE               47 (to 446)
+                352     STORE_FAST                      3: e
+                354     LOAD_GLOBAL                     11: NULL + print
+                364     LOAD_CONST                      7: 'Could not write memory at: '
+                366     LOAD_FAST                       3: e
+                368     LOAD_ATTR                       16: address
+                388     FORMAT_VALUE                    0 (FVC_NONE)
+                390     LOAD_CONST                      6: ' - GetLastError: '
+                392     LOAD_FAST                       3: e
+                394     LOAD_ATTR                       18: error_code
+                414     FORMAT_VALUE                    0 (FVC_NONE)
+                416     BUILD_STRING                    4
+                418     CALL                            1
+                426     POP_TOP
+                428     POP_EXCEPT
+                430     LOAD_CONST                      0: None
+                432     STORE_FAST                      3: e
+                434     DELETE_FAST                     3: e
+                436     RETURN_CONST                    0: None
+                438     LOAD_CONST                      0: None
+                440     STORE_FAST                      3: e
+                442     DELETE_FAST                     3: e
+                444     RERAISE                         1
+                446     LOAD_GLOBAL                     2: pymem
+                456     LOAD_ATTR                       12: exception
+                476     LOAD_ATTR                       22: WinAPIError
+                496     CHECK_EXC_MATCH
+                498     POP_JUMP_IF_FALSE               34 (to 568)
+                500     STORE_FAST                      3: e
+                502     LOAD_GLOBAL                     11: NULL + print
+                512     LOAD_CONST                      8: 'Windows API error occurred: '
+                514     LOAD_FAST                       3: e
+                516     LOAD_ATTR                       18: error_code
+                536     FORMAT_VALUE                    0 (FVC_NONE)
+                538     BUILD_STRING                    2
+                540     CALL                            1
+                548     POP_TOP
+                550     POP_EXCEPT
+                552     LOAD_CONST                      0: None
+                554     STORE_FAST                      3: e
+                556     DELETE_FAST                     3: e
+                558     RETURN_CONST                    0: None
+                560     LOAD_CONST                      0: None
+                562     STORE_FAST                      3: e
+                564     DELETE_FAST                     3: e
+                566     RERAISE                         1
+                568     LOAD_GLOBAL                     24: Exception
+                578     CHECK_EXC_MATCH
+                580     POP_JUMP_IF_FALSE               24 (to 630)
+                582     STORE_FAST                      3: e
+                584     LOAD_GLOBAL                     11: NULL + print
+                594     LOAD_CONST                      9: 'An unexpected error occurred: '
+                596     LOAD_FAST                       3: e
+                598     FORMAT_VALUE                    0 (FVC_NONE)
+                600     BUILD_STRING                    2
+                602     CALL                            1
+                610     POP_TOP
+                612     POP_EXCEPT
+                614     LOAD_CONST                      0: None
+                616     STORE_FAST                      3: e
+                618     DELETE_FAST                     3: e
+                620     RETURN_CONST                    0: None
+                622     LOAD_CONST                      0: None
+                624     STORE_FAST                      3: e
+                626     DELETE_FAST                     3: e
+                628     RERAISE                         1
+                630     RERAISE                         0
+                632     COPY                            3
+                634     POP_EXCEPT
+                636     RERAISE                         1
+        [Code]
+            File Name: Memory.py
+            Object Name: aimdrag_on
+            Qualified Name: aimdrag_on
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 6
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'pymem'
+                'Pymem'
+                'original_drag_values'
+                'clear'
+                'read_int'
+                'append'
+                'write_int'
+            [Locals+Names]
+                'drag_addresses'
+                'pm'
+                'address'
+                'addressscan'
+                'addressrep'
+                'buffer'
+            [Constants]
+                None
+                'HD-Player.exe'
+                92
+                40
+            [Disassembly]
+                0       RESUME                          0
+                2       LOAD_GLOBAL                     1: NULL + pymem
+                12      LOAD_ATTR                       2: Pymem
+                32      LOAD_CONST                      1: 'HD-Player.exe'
+                34      CALL                            1
+                42      STORE_FAST                      1: pm
+                44      LOAD_GLOBAL                     4: original_drag_values
+                54      LOAD_ATTR                       7: clear
+                74      CALL                            0
+                82      POP_TOP
+                84      LOAD_FAST                       0: drag_addresses
+                86      GET_ITER
+                88      FOR_ITER                        83 (to 256)
+                92      STORE_FAST                      2: address
+                94      LOAD_FAST                       2: address
+                96      LOAD_CONST                      2: 92
+                98      BINARY_OP                       0 (+)
+                102     STORE_FAST                      3: addressscan
+                104     LOAD_FAST                       2: address
+                106     LOAD_CONST                      3: 40
+                108     BINARY_OP                       0 (+)
+                112     STORE_FAST                      4: addressrep
+                114     LOAD_FAST                       1: pm
+                116     LOAD_ATTR                       9: read_int
+                136     LOAD_FAST                       3: addressscan
+                138     CALL                            1
+                146     STORE_FAST                      5: buffer
+                148     LOAD_GLOBAL                     4: original_drag_values
+                158     LOAD_ATTR                       11: append
+                178     LOAD_FAST                       1: pm
+                180     LOAD_ATTR                       9: read_int
+                200     LOAD_FAST                       4: addressrep
+                202     CALL                            1
+                210     CALL                            1
+                218     POP_TOP
+                220     LOAD_FAST                       1: pm
+                222     LOAD_ATTR                       13: write_int
+                242     LOAD_FAST                       4: addressrep
+                244     LOAD_FAST                       5: buffer
+                246     CALL                            2
+                254     POP_TOP
+                256     JUMP_BACKWARD                   85 (to 88)
+                258     END_FOR
+                260     RETURN_CONST                    0: None
+        [Code]
+            File Name: Memory.py
+            Object Name: aimdrag_off
+            Qualified Name: aimdrag_off
+            Arg Count: 1
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 6
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'pymem'
+                'Pymem'
+                'enumerate'
+                'original_drag_values'
+                'write_int'
+            [Locals+Names]
+                'drag_addresses'
+                'pm'
+                'index'
+                'address'
+                'addressrep'
+            [Constants]
+                None
+                'HD-Player.exe'
+                40
+            [Disassembly]
+                0       RESUME                          0
+                2       LOAD_GLOBAL                     1: NULL + pymem
+                12      LOAD_ATTR                       2: Pymem
+                32      LOAD_CONST                      1: 'HD-Player.exe'
+                34      CALL                            1
+                42      STORE_FAST                      1: pm
+                44      LOAD_GLOBAL                     5: NULL + enumerate
+                54      LOAD_FAST                       0: drag_addresses
+                56      CALL                            1
+                64      GET_ITER
+                66      FOR_ITER                        45 (to 158)
+                70      UNPACK_SEQUENCE                 2
+                74      STORE_FAST                      2: index
+                76      STORE_FAST                      3: address
+                78      LOAD_FAST                       3: address
+                80      LOAD_CONST                      2: 40
+                82      BINARY_OP                       0 (+)
+                86      STORE_FAST                      4: addressrep
+                88      LOAD_GLOBAL                     6: original_drag_values
+                98      LOAD_FAST                       2: index
+                100     BINARY_SUBSCR
+                104     POP_JUMP_IF_TRUE                1 (to 108)
+                106     JUMP_BACKWARD                   21 (to 66)
+                108     LOAD_FAST                       1: pm
+                110     LOAD_ATTR                       9: write_int
+                130     LOAD_FAST                       4: addressrep
+                132     LOAD_GLOBAL                     6: original_drag_values
+                142     LOAD_FAST                       2: index
+                144     BINARY_SUBSCR
+                148     CALL                            2
+                156     POP_TOP
+                158     JUMP_BACKWARD                   47 (to 66)
+                160     END_FOR
+                162     RETURN_CONST                    0: None
+        [Code]
+            File Name: Memory.py
+            Object Name: aimDra_gonnomal
+            Qualified Name: aimDra_gonnomal
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 7
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'adjust_privileges'
+                'pymem'
+                'Pymem'
+                'find_pattern'
+                'drag_addresses'
+                'print'
+                'len'
+                'read_int'
+                'write_int'
+                'exception'
+                'MemoryReadError'
+                'address'
+                'error_code'
+                'MemoryWriteError'
+                'WinAPIError'
+                'Exception'
+            [Locals+Names]
+                'process_name'
+                'pm'
+                'pattern'
+                'address'
+                'addressscan'
+                'addressrep'
+                'buffer'
+                'e'
+            [Constants]
+                None
+                'HD-Player.exe'
+                b'\x00\x00\x00\x00\x00\x00\xa5C\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00....................................................................................................................\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\xbf'
+                'No addresses found'
+                False
+                'Found '
+                ' addresses'
+                92
+                40
+                'Could not read memory at: '
+                ' - GetLastError: '
+                'Could not write memory at: '
+                'Windows API error occurred: '
+                'An unexpected error occurred: '
+            [Disassembly]
+                0       RESUME                          0
+                2       NOP
+                4       LOAD_GLOBAL                     1: NULL + adjust_privileges
+                14      CALL                            0
+                22      POP_TOP
+                24      LOAD_CONST                      1: 'HD-Player.exe'
+                26      STORE_FAST                      0: process_name
+                28      LOAD_GLOBAL                     3: NULL + pymem
+                38      LOAD_ATTR                       4: Pymem
+                58      LOAD_FAST                       0: process_name
+                60      CALL                            1
+                68      STORE_FAST                      1: pm
+                70      LOAD_CONST                      2: b'\x00\x00\x00\x00\x00\x00\xa5C\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00....................................................................................................................\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\xbf'
+                72      STORE_FAST                      2: pattern
+                74      LOAD_GLOBAL                     7: NULL + find_pattern
+                84      LOAD_FAST                       1: pm
+                86      LOAD_FAST                       0: process_name
+                88      LOAD_FAST                       2: pattern
+                90      CALL                            3
+                98      STORE_GLOBAL                    4: drag_addresses
+                100     LOAD_GLOBAL                     8: drag_addresses
+                110     POP_JUMP_IF_TRUE                12 (to 136)
+                112     LOAD_GLOBAL                     11: NULL + print
+                122     LOAD_CONST                      3: 'No addresses found'
+                124     CALL                            1
+                132     POP_TOP
+                134     RETURN_CONST                    4: False
+                136     LOAD_GLOBAL                     11: NULL + print
+                146     LOAD_CONST                      5: 'Found '
+                148     LOAD_GLOBAL                     13: NULL + len
+                158     LOAD_GLOBAL                     8: drag_addresses
+                168     CALL                            1
+                176     FORMAT_VALUE                    0 (FVC_NONE)
+                178     LOAD_CONST                      6: ' addresses'
+                180     BUILD_STRING                    3
+                182     CALL                            1
+                190     POP_TOP
+                192     LOAD_GLOBAL                     8: drag_addresses
+                202     GET_ITER
+                204     FOR_ITER                        47 (to 300)
+                208     STORE_FAST                      3: address
+                210     LOAD_FAST                       3: address
+                212     LOAD_CONST                      7: 92
+                214     BINARY_OP                       0 (+)
+                218     STORE_FAST                      4: addressscan
+                220     LOAD_FAST                       3: address
+                222     LOAD_CONST                      8: 40
+                224     BINARY_OP                       0 (+)
+                228     STORE_FAST                      5: addressrep
+                230     LOAD_FAST                       1: pm
+                232     LOAD_ATTR                       15: read_int
+                252     LOAD_FAST                       4: addressscan
+                254     CALL                            1
+                262     STORE_FAST                      6: buffer
+                264     LOAD_FAST                       1: pm
+                266     LOAD_ATTR                       17: write_int
+                286     LOAD_FAST                       5: addressrep
+                288     LOAD_FAST                       6: buffer
+                290     CALL                            2
+                298     POP_TOP
+                300     JUMP_BACKWARD                   49 (to 204)
+                302     END_FOR
+                304     LOAD_GLOBAL                     8: drag_addresses
+                314     RETURN_VALUE
+                316     PUSH_EXC_INFO
+                318     LOAD_GLOBAL                     2: pymem
+                328     LOAD_ATTR                       18: exception
+                348     LOAD_ATTR                       20: MemoryReadError
+                368     CHECK_EXC_MATCH
+                370     POP_JUMP_IF_FALSE               47 (to 466)
+                372     STORE_FAST                      7: e
+                374     LOAD_GLOBAL                     11: NULL + print
+                384     LOAD_CONST                      9: 'Could not read memory at: '
+                386     LOAD_FAST                       7: e
+                388     LOAD_ATTR                       22: address
+                408     FORMAT_VALUE                    0 (FVC_NONE)
+                410     LOAD_CONST                      10: ' - GetLastError: '
+                412     LOAD_FAST                       7: e
+                414     LOAD_ATTR                       24: error_code
+                434     FORMAT_VALUE                    0 (FVC_NONE)
+                436     BUILD_STRING                    4
+                438     CALL                            1
+                446     POP_TOP
+                448     POP_EXCEPT
+                450     LOAD_CONST                      0: None
+                452     STORE_FAST                      7: e
+                454     DELETE_FAST                     7: e
+                456     RETURN_CONST                    0: None
+                458     LOAD_CONST                      0: None
+                460     STORE_FAST                      7: e
+                462     DELETE_FAST                     7: e
+                464     RERAISE                         1
+                466     LOAD_GLOBAL                     2: pymem
+                476     LOAD_ATTR                       18: exception
+                496     LOAD_ATTR                       26: MemoryWriteError
+                516     CHECK_EXC_MATCH
+                518     POP_JUMP_IF_FALSE               47 (to 614)
+                520     STORE_FAST                      7: e
+                522     LOAD_GLOBAL                     11: NULL + print
+                532     LOAD_CONST                      11: 'Could not write memory at: '
+                534     LOAD_FAST                       7: e
+                536     LOAD_ATTR                       22: address
+                556     FORMAT_VALUE                    0 (FVC_NONE)
+                558     LOAD_CONST                      10: ' - GetLastError: '
+                560     LOAD_FAST                       7: e
+                562     LOAD_ATTR                       24: error_code
+                582     FORMAT_VALUE                    0 (FVC_NONE)
+                584     BUILD_STRING                    4
+                586     CALL                            1
+                594     POP_TOP
+                596     POP_EXCEPT
+                598     LOAD_CONST                      0: None
+                600     STORE_FAST                      7: e
+                602     DELETE_FAST                     7: e
+                604     RETURN_CONST                    0: None
+                606     LOAD_CONST                      0: None
+                608     STORE_FAST                      7: e
+                610     DELETE_FAST                     7: e
+                612     RERAISE                         1
+                614     LOAD_GLOBAL                     2: pymem
+                624     LOAD_ATTR                       18: exception
+                644     LOAD_ATTR                       28: WinAPIError
+                664     CHECK_EXC_MATCH
+                666     POP_JUMP_IF_FALSE               34 (to 736)
+                668     STORE_FAST                      7: e
+                670     LOAD_GLOBAL                     11: NULL + print
+                680     LOAD_CONST                      12: 'Windows API error occurred: '
+                682     LOAD_FAST                       7: e
+                684     LOAD_ATTR                       24: error_code
+                704     FORMAT_VALUE                    0 (FVC_NONE)
+                706     BUILD_STRING                    2
+                708     CALL                            1
+                716     POP_TOP
+                718     POP_EXCEPT
+                720     LOAD_CONST                      0: None
+                722     STORE_FAST                      7: e
+                724     DELETE_FAST                     7: e
+                726     RETURN_CONST                    0: None
+                728     LOAD_CONST                      0: None
+                730     STORE_FAST                      7: e
+                732     DELETE_FAST                     7: e
+                734     RERAISE                         1
+                736     LOAD_GLOBAL                     30: Exception
+                746     CHECK_EXC_MATCH
+                748     POP_JUMP_IF_FALSE               24 (to 798)
+                750     STORE_FAST                      7: e
+                752     LOAD_GLOBAL                     11: NULL + print
+                762     LOAD_CONST                      13: 'An unexpected error occurred: '
+                764     LOAD_FAST                       7: e
+                766     FORMAT_VALUE                    0 (FVC_NONE)
+                768     BUILD_STRING                    2
+                770     CALL                            1
+                778     POP_TOP
+                780     POP_EXCEPT
+                782     LOAD_CONST                      0: None
+                784     STORE_FAST                      7: e
+                786     DELETE_FAST                     7: e
+                788     RETURN_CONST                    0: None
+                790     LOAD_CONST                      0: None
+                792     STORE_FAST                      7: e
+                794     DELETE_FAST                     7: e
+                796     RERAISE                         1
+                798     RERAISE                         0
+                800     COPY                            3
+                802     POP_EXCEPT
+                804     RERAISE                         1
+        [Code]
+            File Name: Memory.py
+            Object Name: aimDra_gonnomal2
+            Qualified Name: aimDra_gonnomal2
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 7
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'adjust_privileges'
+                'pymem'
+                'Pymem'
+                'find_pattern'
+                'drag_addresses'
+                'print'
+                'len'
+                'read_int'
+                'write_int'
+                'exception'
+                'MemoryReadError'
+                'address'
+                'error_code'
+                'MemoryWriteError'
+                'WinAPIError'
+                'Exception'
+            [Locals+Names]
+                'process_name'
+                'pm'
+                'pattern'
+                'address'
+                'addressscan'
+                'addressrep'
+                'buffer'
+                'e'
+            [Constants]
+                None
+                'HD-Player.exe'
+                b'\x00\x00\x00\x00\x00\x00\xa5C\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00....................................................................................................................\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\xbf'
+                'No addresses found'
+                False
+                'Found '
+                ' addresses'
+                92
+                40
+                'Could not read memory at: '
+                ' - GetLastError: '
+                'Could not write memory at: '
+                'Windows API error occurred: '
+                'An unexpected error occurred: '
+            [Disassembly]
+                0       RESUME                          0
+                2       NOP
+                4       LOAD_GLOBAL                     1: NULL + adjust_privileges
+                14      CALL                            0
+                22      POP_TOP
+                24      LOAD_CONST                      1: 'HD-Player.exe'
+                26      STORE_FAST                      0: process_name
+                28      LOAD_GLOBAL                     3: NULL + pymem
+                38      LOAD_ATTR                       4: Pymem
+                58      LOAD_FAST                       0: process_name
+                60      CALL                            1
+                68      STORE_FAST                      1: pm
+                70      LOAD_CONST                      2: b'\x00\x00\x00\x00\x00\x00\xa5C\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00....................................................................................................................\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80\xbf'
+                72      STORE_FAST                      2: pattern
+                74      LOAD_GLOBAL                     7: NULL + find_pattern
+                84      LOAD_FAST                       1: pm
+                86      LOAD_FAST                       0: process_name
+                88      LOAD_FAST                       2: pattern
+                90      CALL                            3
+                98      STORE_GLOBAL                    4: drag_addresses
+                100     LOAD_GLOBAL                     8: drag_addresses
+                110     POP_JUMP_IF_TRUE                12 (to 136)
+                112     LOAD_GLOBAL                     11: NULL + print
+                122     LOAD_CONST                      3: 'No addresses found'
+                124     CALL                            1
+                132     POP_TOP
+                134     RETURN_CONST                    4: False
+                136     LOAD_GLOBAL                     11: NULL + print
+                146     LOAD_CONST                      5: 'Found '
+                148     LOAD_GLOBAL                     13: NULL + len
+                158     LOAD_GLOBAL                     8: drag_addresses
+                168     CALL                            1
+                176     FORMAT_VALUE                    0 (FVC_NONE)
+                178     LOAD_CONST                      6: ' addresses'
+                180     BUILD_STRING                    3
+                182     CALL                            1
+                190     POP_TOP
+                192     LOAD_GLOBAL                     8: drag_addresses
+                202     GET_ITER
+                204     FOR_ITER                        47 (to 300)
+                208     STORE_FAST                      3: address
+                210     LOAD_FAST                       3: address
+                212     LOAD_CONST                      7: 92
+                214     BINARY_OP                       0 (+)
+                218     STORE_FAST                      4: addressscan
+                220     LOAD_FAST                       3: address
+                222     LOAD_CONST                      8: 40
+                224     BINARY_OP                       0 (+)
+                228     STORE_FAST                      5: addressrep
+                230     LOAD_FAST                       1: pm
+                232     LOAD_ATTR                       15: read_int
+                252     LOAD_FAST                       4: addressscan
+                254     CALL                            1
+                262     STORE_FAST                      6: buffer
+                264     LOAD_FAST                       1: pm
+                266     LOAD_ATTR                       17: write_int
+                286     LOAD_FAST                       5: addressrep
+                288     LOAD_FAST                       6: buffer
+                290     CALL                            2
+                298     POP_TOP
+                300     JUMP_BACKWARD                   49 (to 204)
+                302     END_FOR
+                304     LOAD_GLOBAL                     8: drag_addresses
+                314     RETURN_VALUE
+                316     PUSH_EXC_INFO
+                318     LOAD_GLOBAL                     2: pymem
+                328     LOAD_ATTR                       18: exception
+                348     LOAD_ATTR                       20: MemoryReadError
+                368     CHECK_EXC_MATCH
+                370     POP_JUMP_IF_FALSE               47 (to 466)
+                372     STORE_FAST                      7: e
+                374     LOAD_GLOBAL                     11: NULL + print
+                384     LOAD_CONST                      9: 'Could not read memory at: '
+                386     LOAD_FAST                       7: e
+                388     LOAD_ATTR                       22: address
+                408     FORMAT_VALUE                    0 (FVC_NONE)
+                410     LOAD_CONST                      10: ' - GetLastError: '
+                412     LOAD_FAST                       7: e
+                414     LOAD_ATTR                       24: error_code
+                434     FORMAT_VALUE                    0 (FVC_NONE)
+                436     BUILD_STRING                    4
+                438     CALL                            1
+                446     POP_TOP
+                448     POP_EXCEPT
+                450     LOAD_CONST                      0: None
+                452     STORE_FAST                      7: e
+                454     DELETE_FAST                     7: e
+                456     RETURN_CONST                    0: None
+                458     LOAD_CONST                      0: None
+                460     STORE_FAST                      7: e
+                462     DELETE_FAST                     7: e
+                464     RERAISE                         1
+                466     LOAD_GLOBAL                     2: pymem
+                476     LOAD_ATTR                       18: exception
+                496     LOAD_ATTR                       26: MemoryWriteError
+                516     CHECK_EXC_MATCH
+                518     POP_JUMP_IF_FALSE               47 (to 614)
+                520     STORE_FAST                      7: e
+                522     LOAD_GLOBAL                     11: NULL + print
+                532     LOAD_CONST                      11: 'Could not write memory at: '
+                534     LOAD_FAST                       7: e
+                536     LOAD_ATTR                       22: address
+                556     FORMAT_VALUE                    0 (FVC_NONE)
+                558     LOAD_CONST                      10: ' - GetLastError: '
+                560     LOAD_FAST                       7: e
+                562     LOAD_ATTR                       24: error_code
+                582     FORMAT_VALUE                    0 (FVC_NONE)
+                584     BUILD_STRING                    4
+                586     CALL                            1
+                594     POP_TOP
+                596     POP_EXCEPT
+                598     LOAD_CONST                      0: None
+                600     STORE_FAST                      7: e
+                602     DELETE_FAST                     7: e
+                604     RETURN_CONST                    0: None
+                606     LOAD_CONST                      0: None
+                608     STORE_FAST                      7: e
+                610     DELETE_FAST                     7: e
+                612     RERAISE                         1
+                614     LOAD_GLOBAL                     2: pymem
+                624     LOAD_ATTR                       18: exception
+                644     LOAD_ATTR                       28: WinAPIError
+                664     CHECK_EXC_MATCH
+                666     POP_JUMP_IF_FALSE               34 (to 736)
+                668     STORE_FAST                      7: e
+                670     LOAD_GLOBAL                     11: NULL + print
+                680     LOAD_CONST                      12: 'Windows API error occurred: '
+                682     LOAD_FAST                       7: e
+                684     LOAD_ATTR                       24: error_code
+                704     FORMAT_VALUE                    0 (FVC_NONE)
+                706     BUILD_STRING                    2
+                708     CALL                            1
+                716     POP_TOP
+                718     POP_EXCEPT
+                720     LOAD_CONST                      0: None
+                722     STORE_FAST                      7: e
+                724     DELETE_FAST                     7: e
+                726     RETURN_CONST                    0: None
+                728     LOAD_CONST                      0: None
+                730     STORE_FAST                      7: e
+                732     DELETE_FAST                     7: e
+                734     RERAISE                         1
+                736     LOAD_GLOBAL                     30: Exception
+                746     CHECK_EXC_MATCH
+                748     POP_JUMP_IF_FALSE               24 (to 798)
+                750     STORE_FAST                      7: e
+                752     LOAD_GLOBAL                     11: NULL + print
+                762     LOAD_CONST                      13: 'An unexpected error occurred: '
+                764     LOAD_FAST                       7: e
+                766     FORMAT_VALUE                    0 (FVC_NONE)
+                768     BUILD_STRING                    2
+                770     CALL                            1
+                778     POP_TOP
+                780     POP_EXCEPT
+                782     LOAD_CONST                      0: None
+                784     STORE_FAST                      7: e
+                786     DELETE_FAST                     7: e
+                788     RETURN_CONST                    0: None
+                790     LOAD_CONST                      0: None
+                792     STORE_FAST                      7: e
+                794     DELETE_FAST                     7: e
+                796     RERAISE                         1
+                798     RERAISE                         0
+                800     COPY                            3
+                802     POP_EXCEPT
+                804     RERAISE                         1
+        [Code]
+            File Name: Memory.py
+            Object Name: aim_v1_On_nomal
+            Qualified Name: aim_v1_On_nomal
+            Arg Count: 0
+            Pos Only Arg Count: 0
+            KW Only Arg Count: 0
+            Stack Size: 7
+            Flags: 0x00000003 (CO_OPTIMIZED | CO_NEWLOCALS)
+            [Names]
+                'adjust_privileges'
+                'pymem'
+                'Pymem'
+                'find_pattern'
+                'drag_addresses'
+                'print'
+                'len'
+                'read_int'
+                'write_int'
+                'exception'
+                'MemoryReadError'
+                'address'
+                'error_code'
+                'MemoryWriteError'
+                'WinAPIError'
+                'Exception'
+            [Locals+Names]
+                'process_name'
+                'pm'
+                'pattern'
+                'address'
+                'addressscan'
+                'addressrep'
+                'buffer'
+                'e'
+            [Constants]
+                None
+                'HD-Player.exe'
+                b'..\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00................\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xa5C\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00....................................................................................................................\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80.'
+                'No addresses found'
+                False
+                'Found '
+                ' addresses'
+                144
+                92
+                'Could not read memory at: '
+                ' - GetLastError: '
+                'Could not write memory at: '
+                'Windows API error occurred: '
+                'An unexpected error occurred: '
+            [Disassembly]
+                0       RESUME                          0
+                2       NOP
+                4       LOAD_GLOBAL                     1: NULL + adjust_privileges
+                14      CALL                            0
+                22      POP_TOP
+                24      LOAD_CONST                      1: 'HD-Player.exe'
+                26      STORE_FAST                      0: process_name
+                28      LOAD_GLOBAL                     3: NULL + pymem
+                38      LOAD_ATTR                       4: Pymem
+                58      LOAD_FAST                       0: process_name
+                60      CALL                            1
+                68      STORE_FAST                      1: pm
+                70      LOAD_CONST                      2: b'..\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00................\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xa5C\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00....................................................................................................................\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x80.'
+                72      STORE_FAST                      2: pattern
+                74      LOAD_GLOBAL                     7: NULL + find_pattern
+                84      LOAD_FAST                       1: pm
+                86      LOAD_FAST                       0: process_name
+                88      LOAD_FAST                       2: pattern
+                90      CALL                            3
+                98      STORE_GLOBAL                    4: drag_addresses
+                100     LOAD_GLOBAL                     8: drag_addresses
+                110     POP_JUMP_IF_TRUE                12 (to 136)
+                112     LOAD_GLOBAL                     11: NULL + print
+                122     LOAD_CONST                      3: 'No addresses found'
+                124     CALL                            1
+                132     POP_TOP
+                134     RETURN_CONST                    4: False
+                136     LOAD_GLOBAL                     11: NULL + print
+                146     LOAD_CONST                      5: 'Found '
+                148     LOAD_GLOBAL                     13: NULL + len
+                158     LOAD_GLOBAL                     8: drag_addresses
+                168     CALL                            1
+                176     FORMAT_VALUE                    0 (FVC_NONE)
+                178     LOAD_CONST                      6: ' addresses'
+                180     BUILD_STRING                    3
+                182     CALL                            1
+                190     POP_TOP
+                192     LOAD_GLOBAL                     8: drag_addresses
+                202     GET_ITER
+                204     FOR_ITER                        47 (to 300)
+                208     STORE_FAST                      3: address
+                210     LOAD_FAST                       3: address
+                212     LOAD_CONST                      7: 144
+                214     BINARY_OP                       0 (+)
+                218     STORE_FAST                      4: addressscan
+                220     LOAD_FAST                       3: address
+                222     LOAD_CONST                      8: 92
+                224     BINARY_OP                       0 (+)
+                228     STORE_FAST                      5: addressrep
+                230     LOAD_FAST                       1: pm
+                232     LOAD_ATTR                       15: read_int
+                252     LOAD_FAST                       4: addressscan
+                254     CALL                            1
+                262     STORE_FAST                      6: buffer
+                264     LOAD_FAST                       1: pm
+                266     LOAD_ATTR                       17: write_int
+                286     LOAD_FAST                       5: addressrep
+                288     LOAD_FAST                       6: buffer
+                290     CALL                            2
+                298     POP_TOP
+                300     JUMP_BACKWARD                   49 (to 204)
+                302     END_FOR
+                304     LOAD_GLOBAL                     8: drag_addresses
+                314     RETURN_VALUE
+                316     PUSH_EXC_INFO
+                318     LOAD_GLOBAL                     2: pymem
+                328     LOAD_ATTR                       18: exception
+                348     LOAD_ATTR                       20: MemoryReadError
+                368     CHECK_EXC_MATCH
+                370     POP_JUMP_IF_FALSE               47 (to 466)
+                372     STORE_FAST                      7: e
+                374     LOAD_GLOBAL                     11: NULL + print
+                384     LOAD_CONST                      9: 'Could not read memory at: '
+                386     LOAD_FAST                       7: e
+                388     LOAD_ATTR                       22: address
+                408     FORMAT_VALUE                    0 (FVC_NONE)
+                410     LOAD_CONST                      10: ' - GetLastError: '
+                412     LOAD_FAST                       7: e
+                414     LOAD_ATTR                       24: error_code
+                434     FORMAT_VALUE                    0 (FVC_NONE)
+                436     BUILD_STRING                    4
+                438     CALL                            1
+                446     POP_TOP
+                448     POP_EXCEPT
+                450     LOAD_CONST                      0: None
+                452     STORE_FAST                      7: e
+                454     DELETE_FAST                     7: e
+                456     RETURN_CONST                    0: None
+                458     LOAD_CONST                      0: None
+                460     STORE_FAST                      7: e
+                462     DELETE_FAST                     7: e
+                464     RERAISE                         1
+                466     LOAD_GLOBAL                     2: pymem
+                476     LOAD_ATTR                       18: exception
+                496     LOAD_ATTR                       26: MemoryWriteError
+                516     CHECK_EXC_MATCH
+                518     POP_JUMP_IF_FALSE               47 (to 614)
+                520     STORE_FAST                      7: e
+                522     LOAD_GLOBAL                     11: NULL + print
+                532     LOAD_CONST                      11: 'Could not write memory at: '
+                534     LOAD_FAST                       7: e
+                536     LOAD_ATTR                       22: address
+                556     FORMAT_VALUE                    0 (FVC_NONE)
+                558     LOAD_CONST                      10: ' - GetLastError: '
+                560     LOAD_FAST                       7: e
+                562     LOAD_ATTR                       24: error_code
+                582     FORMAT_VALUE                    0 (FVC_NONE)
+                584     BUILD_STRING                    4
+                586     CALL                            1
+                594     POP_TOP
+                596     POP_EXCEPT
+                598     LOAD_CONST                      0: None
+                600     STORE_FAST                      7: e
+                602     DELETE_FAST                     7: e
+                604     RETURN_CONST                    0: None
+                606     LOAD_CONST                      0: None
+                608     STORE_FAST                      7: e
+                610     DELETE_FAST                     7: e
+                612     RERAISE                         1
+                614     LOAD_GLOBAL                     2: pymem
+                624     LOAD_ATTR                       18: exception
+                644     LOAD_ATTR                       28: WinAPIError
+                664     CHECK_EXC_MATCH
+                666     POP_JUMP_IF_FALSE               34 (to 736)
+                668     STORE_FAST                      7: e
+                670     LOAD_GLOBAL                     11: NULL + print
+                680     LOAD_CONST                      12: 'Windows API error occurred: '
+                682     LOAD_FAST                       7: e
+                684     LOAD_ATTR                       24: error_code
+                704     FORMAT_VALUE                    0 (FVC_NONE)
+                706     BUILD_STRING                    2
+                708     CALL                            1
+                716     POP_TOP
+                718     POP_EXCEPT
+                720     LOAD_CONST                      0: None
+                722     STORE_FAST                      7: e
+                724     DELETE_FAST                     7: e
+                726     RETURN_CONST                    0: None
+                728     LOAD_CONST                      0: None
+                730     STORE_FAST                      7: e
+                732     DELETE_FAST                     7: e
+                734     RERAISE                         1
+                736     LOAD_GLOBAL                     30: Exception
+                746     CHECK_EXC_MATCH
+                748     POP_JUMP_IF_FALSE               24 (to 798)
+                750     STORE_FAST                      7: e
+                752     LOAD_GLOBAL                     11: NULL + print
+                762     LOAD_CONST                      13: 'An unexpected error occurred: '
+                764     LOAD_FAST                       7: e
+                766     FORMAT_VALUE                    0 (FVC_NONE)
+                768     BUILD_STRING                    2
+                770     CALL                            1
+                778     POP_TOP
+                780     POP_EXCEPT
+                782     LOAD_CONST                      0: None
+                784     STORE_FAST                      7: e
+                786     DELETE_FAST                     7: e
+                788     RETURN_CONST                    0: None
+                790     LOAD_CONST                      0: None
+                792     STORE_FAST                      7: e
+                794     DELETE_FAST                     7: e
+                796     RERAISE                         1
+                798     RERAISE                         0
+                800     COPY                            3
+                802     POP_EXCEPT
+                804     RERAISE                         1
+    [Disassembly]
+        0       RESUME                          0
+        2       LOAD_CONST                      0: 0
+        4       LOAD_CONST                      1: None
+        6       IMPORT_NAME                     0: pyexpat
+        8       STORE_NAME                      0: pyexpat
+        10      LOAD_CONST                      0: 0
+        12      LOAD_CONST                      1: None
+        14      IMPORT_NAME                     1: pymem
+        16      STORE_NAME                      1: pymem
+        18      LOAD_CONST                      0: 0
+        20      LOAD_CONST                      1: None
+        22      IMPORT_NAME                     2: pymem.pattern
+        24      STORE_NAME                      1: pymem
+        26      LOAD_CONST                      0: 0
+        28      LOAD_CONST                      1: None
+        30      IMPORT_NAME                     3: pymem.process
+        32      STORE_NAME                      1: pymem
+        34      LOAD_CONST                      0: 0
+        36      LOAD_CONST                      1: None
+        38      IMPORT_NAME                     4: time
+        40      STORE_NAME                      4: time
+        42      LOAD_CONST                      0: 0
+        44      LOAD_CONST                      1: None
+        46      IMPORT_NAME                     5: ctypes
+        48      STORE_NAME                      5: ctypes
+        50      LOAD_CONST                      0: 0
+        52      LOAD_CONST                      1: None
+        54      IMPORT_NAME                     6: ctypes.wintypes
+        56      STORE_NAME                      5: ctypes
+        58      LOAD_CONST                      0: 0
+        60      LOAD_CONST                      1: None
+        62      IMPORT_NAME                     7: os
+        64      STORE_NAME                      7: os
+        66      LOAD_CONST                      0: 0
+        68      LOAD_CONST                      1: None
+        70      IMPORT_NAME                     8: sys
+        72      STORE_NAME                      8: sys
+        74      LOAD_CONST                      1: None
+        76      STORE_NAME                      9: pm
+        78      LOAD_CONST                      2: <CODE> scan_and_replace
+        80      MAKE_FUNCTION                   0
+        82      STORE_NAME                      10: scan_and_replace
+        84      LOAD_CONST                      3: <CODE> get_resource_path
+        86      MAKE_FUNCTION                   0
+        88      STORE_NAME                      11: get_resource_path
+        90      LOAD_CONST                      4: <CODE> get_process
+        92      MAKE_FUNCTION                   0
+        94      STORE_NAME                      12: get_process
+        96      LOAD_CONST                      5: <CODE> get_pid
+        98      MAKE_FUNCTION                   0
+        100     STORE_NAME                      13: get_pid
+        102     LOAD_CONST                      6: <CODE> get_drive_serial_number
+        104     MAKE_FUNCTION                   0
+        106     STORE_NAME                      14: get_drive_serial_number
+        108     LOAD_CONST                      7: <CODE> get_hwid
+        110     MAKE_FUNCTION                   0
+        112     STORE_NAME                      15: get_hwid
+        114     LOAD_CONST                      8: <CODE> adjust_privileges
+        116     MAKE_FUNCTION                   0
+        118     STORE_NAME                      16: adjust_privileges
+        120     LOAD_CONST                      9: <CODE> find_pattern
+        122     MAKE_FUNCTION                   0
+        124     STORE_NAME                      17: find_pattern
+        126     LOAD_CONST                      10: <CODE> aimbot_load
+        128     MAKE_FUNCTION                   0
+        130     STORE_NAME                      18: aimbot_load
+        132     BUILD_LIST                      0
+        134     STORE_GLOBAL                    19: original_values
+        136     LOAD_CONST                      11: <CODE> aimbot_on
+        138     MAKE_FUNCTION                   0
+        140     STORE_NAME                      20: aimbot_on
+        142     LOAD_CONST                      12: <CODE> aimbot_off
+        144     MAKE_FUNCTION                   0
+        146     STORE_NAME                      21: aimbot_off
+        148     LOAD_CONST                      13: <CODE> drag_load
+        150     MAKE_FUNCTION                   0
+        152     STORE_NAME                      22: drag_load
+        154     BUILD_LIST                      0
+        156     STORE_GLOBAL                    23: original_drag_values
+        158     LOAD_CONST                      14: <CODE> aimdrag_on
+        160     MAKE_FUNCTION                   0
+        162     STORE_NAME                      24: aimdrag_on
+        164     LOAD_CONST                      15: <CODE> aimdrag_off
+        166     MAKE_FUNCTION                   0
+        168     STORE_NAME                      25: aimdrag_off
+        170     LOAD_CONST                      16: <CODE> aimDra_gonnomal
+        172     MAKE_FUNCTION                   0
+        174     STORE_NAME                      26: aimDra_gonnomal
+        176     LOAD_CONST                      17: <CODE> aimDra_gonnomal2
+        178     MAKE_FUNCTION                   0
+        180     STORE_NAME                      27: aimDra_gonnomal2
+        182     LOAD_CONST                      18: <CODE> aim_v1_On_nomal
+        184     MAKE_FUNCTION                   0
+        186     STORE_NAME                      28: aim_v1_On_nomal
+        188     RETURN_CONST                    1: None
